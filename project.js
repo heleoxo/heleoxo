@@ -1,12 +1,12 @@
 $( document ).ready(function() {
-    if ($("input[name='lists[stg-upgrade-OXO-tot]']").is(':checked')) {
-        $(".oxoTot").addClass("card-selected");
-        $(".overlay").hide();
-       }
-       else {
-        $(".oxoTot").removeClass("card-selected");
-       }
-
+    $( "input[name='lists[stg-upgrade-OXO-tot]']" ).click(function() {
+        if ($(this).is(':checked')) {
+         $(".oxoTot").addClass("card-selected");
+        }
+        else {
+         $(".oxoTot").removeClass("card-selected");
+        }
+       });
     $( "input[name='lists[stg-upgrade-OXO-updates]']" ).click(function() {
         if ($(this).is(':checked')) {
          $(".oxoUpdates").addClass("card-selected");
